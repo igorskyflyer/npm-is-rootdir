@@ -1,6 +1,8 @@
 ## npm-is-rootdir
 
-🔼 Provides a way to check if the given path is the root/drive directory. ⛔ Uses `String` manipulation techniques and it doesn't actually check if the path exists.
+🔼 Provides a way to check if the given path is the root/drive directory. ⛔
+
+Uses `String` manipulation techniques and it doesn't actually check if the path exists.
 
 <br>
 
