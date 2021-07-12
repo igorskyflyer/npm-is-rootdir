@@ -50,7 +50,6 @@ function isRootDirectoryUnix(path) {
   return checkRootDirectory(ux(path, true), '/', unixDirectoryCount)
 }
 
-// here 👇 you should export VS Code dependent API
 module.exports = {
   isRootDirectory,
   isRootDirectoryUnix,
