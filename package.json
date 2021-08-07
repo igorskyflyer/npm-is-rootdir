@@ -1,17 +1,30 @@
 {
 	"name": "@igor.dvlpr/is-rootdir",
-	"description": "Provides a way to check if the given path is the root/drive directory.",
-	"version": "1.0.0",
-	"main": "index.js",
-	"files": [
-		"index.js",
-		"dist/"
-	],
-	"types": "./dist/index.d.ts",
-	"directories": {
-		"test": "test"
+	"description": "🔼 Provides a way to check if the given path is the root drive/directory. ⛔ ",
+	"version": "2.0.0",
+	"type": "module",
+	"engines": {
+		"node": ">=12.17"
 	},
+	"sideEffects": false,
+	"main": "main",
+	"exports": {
+		".": {
+			"require": "./dist/compat/main.cjs",
+			"import": "./dist/module/main.js"
+		}
+	},
+	"module": "./dist/module/main.js",
+	"types": "./dist/main",
+	"files": [
+		"dist"
+	],
 	"scripts": {
+		"clean": "rimraf ./dist/*",
+		"build:cjs": "cross-env BABEL_ENV=cjs babel src -d dist/compat --out-file-extension .cjs",
+		"build:esm": "cross-env BABEL_ENV=esm babel src -d dist/module",
+		"build:dts": "tsc",
+		"build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:dts",
 		"test": "mocha --slow 0",
 		"party": "npm test && tsc && npm publish --access public"
 	},
@@ -36,11 +49,21 @@
 	},
 	"homepage": "https://github.com/igorskyflyer/npm-is-rootdir#readme",
 	"dependencies": {
-		"@igor.dvlpr/upath": "^1.2.1"
+		"@igor.dvlpr/upath": "^2.0.1"
 	},
 	"devDependencies": {
-		"@types/mocha": "^8.2.3",
+		"@babel/cli": "^7.14.8",
+		"@babel/core": "^7.15.0",
+		"@babel/plugin-transform-modules-commonjs": "^7.15.0",
+		"@babel/preset-env": "^7.15.0",
+		"@types/chai": "^4.2.21",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "^12.17.0",
+		"babel-plugin-add-import-extension": "^1.6.0",
 		"chai": "^4.3.4",
-		"mocha": "^9.0.2"
+		"cross-env": "^7.0.3",
+		"mocha": "^9.0.3",
+		"rimraf": "^3.0.2",
+		"typescript": "^4.3.5"
 	}
 }
