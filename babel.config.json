@@ -1,0 +1,32 @@
+{
+	"env": {
+		"cjs": {
+			"plugins": [
+				[
+					"babel-plugin-add-import-extension",
+					{
+						"extension": "cjs",
+						"replace": true
+					}
+				],
+				[
+					"@babel/plugin-transform-modules-commonjs",
+					{
+						"strict": true
+					}
+				]
+			]
+		},
+		"esm": {
+			"plugins": [
+				[
+					"babel-plugin-add-import-extension",
+					{
+						"extension": "js",
+						"replace": true
+					}
+				]
+			]
+		}
+	}
+}
