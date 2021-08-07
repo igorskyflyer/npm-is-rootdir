@@ -1,8 +1,13 @@
-## npm-is-rootdir
+## is-rootdir
 
 🔼 Provides a way to check if the given path is the root/drive directory. ⛔
 
 Uses `String` manipulation techniques and it doesn't actually check if the path exists.
+
+<br>
+<br>
+
+✨ Since version `2.0.0` `is-rootdir` is a hybrid module that supports both CommonJS (legacy) and ES modules, thanks to [Modern Module](https://github.com/igorskyflyer/npm-modern-module).
 
 <br>
 
@@ -29,10 +34,7 @@ Three functions are exposed,
 Use it as follows:
 
 ```js
-const {
-  isRootDirectoryUnix,
-  isRootDirectoryWin,
-} = require('@igor.dvlpr/is-rootdir')
+import { isRootDirectoryUnix, isRootDirectoryWin } from '@igor.dvlpr/is-rootdir'
 
 // no examples and tests for isRootDirectory, read more above
 
