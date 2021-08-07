@@ -1,5 +1,5 @@
-const { slash, u, uw, ux } = require('@igor.dvlpr/upath')
-const { platform } = require('os')
+import { slash, u, uw, ux } from '@igor.dvlpr/upath'
+import { platform } from 'os'
 
 const os = platform()
 const isWindows = os === 'win32'
@@ -12,6 +12,8 @@ const rootDirectoryCount = isWindows ? winDirectoryCount : unixDirectoryCount
  * Checks whether the given path is a root folder/drive path.
  * @private
  * @param {string} path
+ * @param {string} osSlash
+ * @param {number} count
  * @returns {boolean}
  */
 function checkRootDirectory(path, osSlash, count) {
@@ -28,7 +30,7 @@ function checkRootDirectory(path, osSlash, count) {
  * @param {string} path
  * @returns {boolean}
  */
-function isRootDirectory(path) {
+export function isRootDirectory(path) {
   return checkRootDirectory(u(path, true), slash, rootDirectoryCount)
 }
 
@@ -37,7 +39,7 @@ function isRootDirectory(path) {
  * @param {string} path
  * @returns {boolean}
  */
-function isRootDirectoryWin(path) {
+export function isRootDirectoryWin(path) {
   return checkRootDirectory(uw(path, true), '\\', winDirectoryCount)
 }
 
@@ -46,12 +48,6 @@ function isRootDirectoryWin(path) {
  * @param {string} path
  * @returns {boolean}
  */
-function isRootDirectoryUnix(path) {
+export function isRootDirectoryUnix(path) {
   return checkRootDirectory(ux(path, true), '/', unixDirectoryCount)
-}
-
-module.exports = {
-  isRootDirectory,
-  isRootDirectoryUnix,
-  isRootDirectoryWin,
 }
