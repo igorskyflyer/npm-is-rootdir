@@ -1,5 +1,5 @@
-import { assert as chai } from 'chai'
-import { isRootDirectoryUnix, isRootDirectoryWin } from '../src/main.js'
+const chai = require('chai').assert
+const { isRootDirectoryUnix, isRootDirectoryWin } = require('../src/index.js')
 
 describe('🧪 isRootDirectory tests 🧪', () => {
   describe('isRootDirectoryUnix', () => {
