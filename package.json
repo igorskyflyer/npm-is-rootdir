@@ -1,7 +1,7 @@
 {
 	"name": "@igor.dvlpr/is-rootdir",
 	"description": "🔼 Provides a way to check if the given path is the root drive/directory. ⛔ ",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"engines": {
 		"node": ">=12.17"
 	},
@@ -20,7 +20,7 @@
 		"src"
 	],
 	"scripts": {
-		"test": "mocha --slow 0",
+		"test": "mocha",
 		"pub": "npm test && tsc && npm publish --access public"
 	},
 	"repository": {
@@ -44,7 +44,7 @@
 	},
 	"homepage": "https://github.com/igorskyflyer/npm-is-rootdir#readme",
 	"dependencies": {
-		"@igor.dvlpr/upath": "^2.0.1"
+		"@igor.dvlpr/upath": "^2.1.1"
 	},
 	"devDependencies": {
 		"@types/chai": "^4.2.21",
