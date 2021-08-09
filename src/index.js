@@ -1,5 +1,5 @@
-import { slash, u, uw, ux } from '@igor.dvlpr/upath'
-import { platform } from 'os'
+const { slash, u, uw, ux } = require('@igor.dvlpr/upath')
+const { platform } = require('os')
 
 const os = platform()
 const isWindows = os === 'win32'
@@ -30,7 +30,7 @@ function checkRootDirectory(path, osSlash, count) {
  * @param {string} path
  * @returns {boolean}
  */
-export function isRootDirectory(path) {
+function isRootDirectory(path) {
   return checkRootDirectory(u(path, true), slash, rootDirectoryCount)
 }
 
@@ -39,7 +39,7 @@ export function isRootDirectory(path) {
  * @param {string} path
  * @returns {boolean}
  */
-export function isRootDirectoryWin(path) {
+function isRootDirectoryWin(path) {
   return checkRootDirectory(uw(path, true), '\\', winDirectoryCount)
 }
 
@@ -48,6 +48,8 @@ export function isRootDirectoryWin(path) {
  * @param {string} path
  * @returns {boolean}
  */
-export function isRootDirectoryUnix(path) {
+function isRootDirectoryUnix(path) {
   return checkRootDirectory(ux(path, true), '/', unixDirectoryCount)
 }
+
+module.exports = { isRootDirectory, isRootDirectoryUnix, isRootDirectoryWin }
