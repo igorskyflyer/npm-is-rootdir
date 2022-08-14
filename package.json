@@ -1,7 +1,7 @@
 {
 	"name": "@igor.dvlpr/is-rootdir",
 	"description": "🔼 Provides a way to check if the given path is the root drive/directory. ⛔ ",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"engines": {
 		"node": ">=12.17"
 	},
