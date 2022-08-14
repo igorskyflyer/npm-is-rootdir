@@ -1,7 +1,7 @@
 {
 	"name": "@igor.dvlpr/is-rootdir",
 	"description": "🔼 Provides a way to check if the given path is the root drive/directory. ⛔ ",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"engines": {
 		"node": ">=12.17"
 	},
@@ -47,11 +47,11 @@
 		"@igor.dvlpr/upath": "^2.1.1"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.2.21",
-		"@types/mocha": "^9.0.0",
+		"@types/chai": "^4.3.3",
+		"@types/mocha": "^9.1.1",
 		"@types/node": "^12.17.0",
-		"chai": "^4.3.4",
-		"mocha": "^9.0.3",
-		"typescript": "^4.3.5"
+		"chai": "^4.3.6",
+		"mocha": "^10.0.0",
+		"typescript": "^4.7.4"
 	}
 }
