@@ -37,7 +37,7 @@
 		"utility",
 		"filesystem"
 	],
-	"author": "Igor Dimitrijević",
+	"author": "Igor Dimitrijević <admin@igorskyflyer.me> (https://github.com/igorskyflyer)",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/igorskyflyer/npm-is-rootdir/issues"
