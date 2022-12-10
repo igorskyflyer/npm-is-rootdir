@@ -1,7 +1,7 @@
 {
 	"name": "@igor.dvlpr/is-rootdir",
 	"description": "🔼 Provides a way to check if the given path is the root drive/directory. ⛔ ",
-	"version": "2.1.2",
+	"version": "2.1.3",
 	"engines": {
 		"node": ">=12.17"
 	},
@@ -37,21 +37,22 @@
 		"utility",
 		"filesystem"
 	],
-	"author": "Igor Dimitrijević",
+	"author": "Igor Dimitrijević <admin@igorskyflyer.me> (https://github.com/igorskyflyer)",
+	"funding": "https://ko-fi.com/igorskyflyer",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/igorskyflyer/npm-is-rootdir/issues"
 	},
 	"homepage": "https://github.com/igorskyflyer/npm-is-rootdir#readme",
 	"dependencies": {
-		"@igor.dvlpr/upath": "^2.1.1"
+		"@igor.dvlpr/upath": "^2.1.2"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.3.3",
-		"@types/mocha": "^9.1.1",
+		"@types/chai": "^4.3.4",
+		"@types/mocha": "^10.0.0",
 		"@types/node": "^12.17.0",
-		"chai": "^4.3.6",
-		"mocha": "^10.0.0",
-		"typescript": "^4.7.4"
+		"chai": "^4.3.7",
+		"mocha": "^10.1.0",
+		"typescript": "^4.9.3"
 	}
 }
