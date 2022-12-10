@@ -47,10 +47,10 @@
 		"@igor.dvlpr/upath": "^2.1.2"
 	},
 	"devDependencies": {
-		"@types/chai": "^4.3.7",
+		"@types/chai": "^4.3.4",
 		"@types/mocha": "^10.0.0",
 		"@types/node": "^12.17.0",
-		"chai": "^4.3.6",
+		"chai": "^4.3.7",
 		"mocha": "^10.1.0",
 		"typescript": "^4.9.3"
 	}
