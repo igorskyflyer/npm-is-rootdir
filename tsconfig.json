@@ -1,24 +1,21 @@
 {
-	"include": [
-		"src/**/*"
-	],
-	"exclude": [
-		"node_modules/**/*"
-	],
-	"compilerOptions": {
-		"module": "ES6",
-		"allowJs": true,
-		"checkJs": true,
-		"declaration": true,
-		"emitDeclarationOnly": true,
-		"skipLibCheck": true,
-		"forceConsistentCasingInFileNames": true,
-		"declarationDir": "dist",
-		"moduleResolution": "node",
-		"allowSyntheticDefaultImports": true,
-		"noEmitOnError": true,
-		"strict": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true
-	}
+    "include": ["src/**/*"],
+    "exclude": ["node_modules/**/*", "test/**/*", "dist/**/*"],
+    "compilerOptions": {
+        "target": "ES2023",
+        "lib": ["ES2023"],
+        "module": "NodeNext",
+        "moduleResolution": "nodenext",
+        "declaration": true,
+        "outDir": "./dist",
+        "declarationDir": "./dist",
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmitOnError": true,
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true
+    }
 }
