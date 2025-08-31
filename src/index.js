@@ -1,12 +1,12 @@
-const { slash, u, uw, ux } = require('@igor.dvlpr/upath')
-const { platform } = require('os')
+import { slash, u, uw, ux } from '@igorskyflyer/upath'
+import { platform } from 'node:os'
 
-const os = platform()
-const isWindows = os === 'win32'
+const os=platform()
+const isWindows=os==='win32'
 
-const winDirectoryCount = 2
-const unixDirectoryCount = 1
-const rootDirectoryCount = isWindows ? winDirectoryCount : unixDirectoryCount
+const winDirectoryCount=2
+const unixDirectoryCount=1
+const rootDirectoryCount=isWindows? winDirectoryCount:unixDirectoryCount
 
 /**
  * Checks whether the given path is a root folder/drive path.
@@ -21,8 +21,7 @@ function checkRootDirectory(path, osSlash, count) {
     return false
   }
 
-  // prettier-ignore
-  return (path.split(osSlash).filter((value) => value.length > 0).length < count)
+  return (path.split(osSlash).filter((value) => value.length>0).length<count)
 }
 
 /**
@@ -30,7 +29,7 @@ function checkRootDirectory(path, osSlash, count) {
  * @param {string} path
  * @returns {boolean}
  */
-function isRootDirectory(path) {
+export function isRootDirectory(path) {
   return checkRootDirectory(u(path, true), slash, rootDirectoryCount)
 }
 
@@ -39,7 +38,7 @@ function isRootDirectory(path) {
  * @param {string} path
  * @returns {boolean}
  */
-function isRootDirectoryWin(path) {
+export function isRootDirectoryWin(path) {
   return checkRootDirectory(uw(path, true), '\\', winDirectoryCount)
 }
 
@@ -48,8 +47,6 @@ function isRootDirectoryWin(path) {
  * @param {string} path
  * @returns {boolean}
  */
-function isRootDirectoryUnix(path) {
+export function isRootDirectoryUnix(path) {
   return checkRootDirectory(ux(path, true), '/', unixDirectoryCount)
 }
-
-module.exports = { isRootDirectory, isRootDirectoryUnix, isRootDirectoryWin }
