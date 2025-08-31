@@ -1,12 +1,12 @@
 import { slash, u, uw, ux } from '@igorskyflyer/upath'
 import { platform } from 'node:os'
 
-const os=platform()
-const isWindows=os==='win32'
+const os = platform()
+const isWindows = os === 'win32'
 
-const winDirectoryCount=2
-const unixDirectoryCount=1
-const rootDirectoryCount=isWindows? winDirectoryCount:unixDirectoryCount
+const winDirectoryCount = 2
+const unixDirectoryCount = 1
+const rootDirectoryCount = isWindows ? winDirectoryCount : unixDirectoryCount
 
 /**
  * Checks whether the given path is a root folder/drive path.
@@ -16,12 +16,16 @@ const rootDirectoryCount=isWindows? winDirectoryCount:unixDirectoryCount
  * @param {number} count
  * @returns {boolean}
  */
-function checkRootDirectory(path: string, osSlash: string, count: number): boolean {
+function checkRootDirectory(
+  path: string,
+  osSlash: string,
+  count: number
+): boolean {
   if (!path) {
     return false
   }
 
-  return (path.split(osSlash).filter((value) => value.length>0).length<count)
+  return path.split(osSlash).filter((value) => value.length > 0).length < count
 }
 
 /**
