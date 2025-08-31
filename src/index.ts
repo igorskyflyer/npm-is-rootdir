@@ -16,7 +16,7 @@ const rootDirectoryCount=isWindows? winDirectoryCount:unixDirectoryCount
  * @param {number} count
  * @returns {boolean}
  */
-function checkRootDirectory(path, osSlash, count) {
+function checkRootDirectory(path: string, osSlash: string, count: number): boolean {
   if (!path) {
     return false
   }
@@ -29,7 +29,7 @@ function checkRootDirectory(path, osSlash, count) {
  * @param {string} path
  * @returns {boolean}
  */
-export function isRootDirectory(path) {
+export function isRootDirectory(path: string): boolean {
   return checkRootDirectory(u(path, true), slash, rootDirectoryCount)
 }
 
@@ -38,7 +38,7 @@ export function isRootDirectory(path) {
  * @param {string} path
  * @returns {boolean}
  */
-export function isRootDirectoryWin(path) {
+export function isRootDirectoryWin(path: string): boolean {
   return checkRootDirectory(uw(path, true), '\\', winDirectoryCount)
 }
 
@@ -47,6 +47,6 @@ export function isRootDirectoryWin(path) {
  * @param {string} path
  * @returns {boolean}
  */
-export function isRootDirectoryUnix(path) {
+export function isRootDirectoryUnix(path: string): boolean {
   return checkRootDirectory(ux(path, true), '/', unixDirectoryCount)
 }
